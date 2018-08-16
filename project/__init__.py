@@ -19,7 +19,7 @@ app.register_blueprint(routes)
 
 from project.models import User
 
-login_manager.login_view = "login"
+login_manager.login_view = "/login"
 
 
 @login_manager.user_loader
