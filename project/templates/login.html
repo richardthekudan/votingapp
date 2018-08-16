@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Voting App</title>
+    </head>
+    <body>
+        <div align="center">
+            <h2>Login</h2><br>
+            <form action="/login" method="post">
+                <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}" required><br>
+                <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}" required><br>
+                <input type="submit" value="Login">
+                {% if login_failed %}<br><font size="1">Username and/or password is incorrect. Please try again.</font>{% endif %}
+                {% if logged_out %}<br><font size="1">You need to login first.</font>{% endif %}
+            </form>
+        </div>
+    </body>
+</html>

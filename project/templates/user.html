@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <title>Voting App</title>
+    <body>
+        <div align="center">
+            <h1>Select the candidate to cast your vote</h1>
+            <form action="/vote" method="post">
+                <table>
+                    <tr>
+                        <th align="center">Candidate Name</th>
+                        <th align="center"></th>
+                    </tr>
+            {% for candidate in candidates %}
+                    <tr>
+                        <td align="center">{{ candidate.name }}</td>
+                        <td align="center"><label><input type="radio" id="{{ candidate.name }}" name="options" value="{{ candidate.name }}" required></label></td>
+                    </tr>
+            {% endfor %}
+                </table>
+                <input type="submit" value="Vote"><button name="logout" formaction="/logout" formnovalidate>Logout</button>
+            </form>
+        </div>
+    </body>
+</html>

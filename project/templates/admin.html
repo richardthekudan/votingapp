@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <title>Voting App</title>
+    <body>
+        <div align="center">
+            <form>
+                <table>
+                    <tr>
+                        <th align="center">Candidate Name</th>
+                        <th align="center">Votes</th>
+                    </tr>
+                {% for candidate in candidates %}
+                    <tr>
+                        <td align="center">{{ candidate.name }}</td>
+                        <td align="center">{{ candidate.votes }}</td>
+                    </tr>
+                {% endfor %}
+                </table>
+                <button name="logout" formaction="/logout">Logout</button>
+            </form>
+        </div>
+    </body>
+</html>

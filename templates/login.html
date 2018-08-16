@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title>Voting App</title>
+  </head>
+  <body>
+    <div align="center">
+      <h1>Login</h1>
+      <br>
+      <form action="/login" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}"><br>
+        <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}"><br>
+        <input type="submit" value="Login">
+      </form>
+    </div>
+  </body>
+</html>

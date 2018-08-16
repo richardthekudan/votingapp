@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Voting App</title>
+    </head>
+    <body>
+        <div align="center">
+            <form>
+                {% if finished %}<font>Thank you for voting.</font>{% endif %}
+                {% if voted %}<font>You have already voted. You cannot cast a  vote again.</font>{% endif %}
+            <button name="logout" formaction="/logout">Logout</button>
+            </form>
+        </div>
+    </body>
+</html>
